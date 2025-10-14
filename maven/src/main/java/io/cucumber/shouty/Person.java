@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
+
     private List<String> messagesHears;
+    private List<String> messagesShouts;
     private String name;
 
     public Person(String name) {
         this.name = name;
         messagesHears = new ArrayList<>();
+        messagesShouts = new ArrayList<>();
     }
 
     public String getName() {
@@ -20,12 +23,28 @@ public class Person {
         this.name = name;
     }
 
+    public void setMessagesHears(List<String> messagesHears) {
+        this.messagesHears = messagesHears;
+    }
+
+    public void setMessagesShouts(List<String> messagesShouts) {
+        this.messagesShouts = messagesShouts;
+    }
+
     public List<String> getMessagesHears() {
         return messagesHears;
     }
 
     public void addMessagesHears(String messagesHear) {
         this.messagesHears.add(messagesHear);
+    }
+
+    public List<String> getMessagesShouts(){
+        return messagesShouts;
+    }
+
+    public void addMessagesShouts(String messageShout){
+        this.messagesShouts.add(messageShout);
     }
 
     public void moveTo(Integer distance){
